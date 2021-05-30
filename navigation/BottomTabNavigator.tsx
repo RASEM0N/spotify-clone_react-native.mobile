@@ -1,10 +1,5 @@
-import {
-    Ionicons,
-    Entypo,
-    EvilIcons,
-    MaterialCommunityIcons,
-    FontAwesome5,
-} from '@expo/vector-icons'
+// https://icons.expo.fyi/
+import { Entypo, EvilIcons, MaterialCommunityIcons, FontAwesome5 } from '@expo/vector-icons'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { createStackNavigator } from '@react-navigation/stack'
 import * as React from 'react'
@@ -13,7 +8,7 @@ import Colors from '../constants/Colors'
 import useColorScheme from '../hooks/useColorScheme'
 import HomeScreen from '../screens/HomeScreen'
 import TabTwoScreen from '../screens/TabTwoScreen'
-import { BottomTabParamList, TabOneParamList, TabTwoParamList } from '../types'
+import { BottomTabParamList, HomeParamList, TabTwoParamList } from '../types'
 
 const BottomTab = createBottomTabNavigator<BottomTabParamList>()
 
@@ -27,7 +22,7 @@ export default function BottomTabNavigator() {
         >
             <BottomTab.Screen
                 name="Home"
-                component={TabOneNavigator}
+                component={HomeNavigator}
                 options={{
                     tabBarIcon: ({ color }) => (
                         <Entypo name="home" size={30} style={{ marginBottom: -3 }} color={color} />
@@ -81,24 +76,20 @@ export default function BottomTabNavigator() {
 }
 
 // You can explore the built-in icon families and icons on the web at:
-// https://icons.expo.fyi/
-function TabBarIcon(props: { name: React.ComponentProps<typeof Ionicons>['name']; color: string }) {
-    return <Ionicons size={30} style={{ marginBottom: -3 }} {...props} />
-}
 
 // Each tab has its own navigation stack, you can read more about this pattern here:
 // https://reactnavigation.org/docs/tab-based-navigation#a-stack-navigator-for-each-tab
-const TabOneStack = createStackNavigator<TabOneParamList>()
+const HomeStack = createStackNavigator<HomeParamList>()
 
-function TabOneNavigator() {
+function HomeNavigator() {
     return (
-        <TabOneStack.Navigator>
-            <TabOneStack.Screen
-                name={'TabOneScreen'}
+        <HomeStack.Navigator>
+            <HomeStack.Screen
+                name="Home"
                 component={HomeScreen}
                 options={{ headerTitle: 'Home', headerTitleAlign: 'center' }}
             />
-        </TabOneStack.Navigator>
+        </HomeStack.Navigator>
     )
 }
 

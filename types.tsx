@@ -5,12 +5,15 @@ export type RootStackParamList = {
 }
 
 export type BottomTabParamList = {
-    TabOne: undefined
-    TabTwo: undefined
+    Home: undefined
+    'Your Library': undefined
+    Premium: undefined
+    Search: undefined
 }
 
-export type TabOneParamList = {
-    TabOneScreen: undefined
+export type HomeParamList = {
+    Home: undefined
+    Album: undefined
 }
 
 export type TabTwoParamList = {
