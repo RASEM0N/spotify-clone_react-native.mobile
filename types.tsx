@@ -1,22 +1,25 @@
-/**
- * Learn more about using TypeScript with React Navigation:
- * https://reactnavigation.org/docs/typescript/
- */
-
+//#region other
 export type RootStackParamList = {
-  Root: undefined;
-  NotFound: undefined;
-};
+    Root: undefined
+    NotFound: undefined
+}
 
 export type BottomTabParamList = {
-  TabOne: undefined;
-  TabTwo: undefined;
-};
+    TabOne: undefined
+    TabTwo: undefined
+}
 
 export type TabOneParamList = {
-  TabOneScreen: undefined;
-};
+    TabOneScreen: undefined
+}
 
 export type TabTwoParamList = {
-  TabTwoScreen: undefined;
-};
+    TabTwoScreen: undefined
+}
+//#endregion
+
+export interface Album {
+    id: string
+    imageUrl: string
+    artistHeadline: string
+}

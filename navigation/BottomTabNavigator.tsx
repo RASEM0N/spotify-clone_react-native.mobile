@@ -94,9 +94,9 @@ function TabOneNavigator() {
     return (
         <TabOneStack.Navigator>
             <TabOneStack.Screen
-                name="TabOneScreen"
+                name={'TabOneScreen'}
                 component={HomeScreen}
-                options={{ headerTitle: 'Tab One Title' }}
+                options={{ headerTitle: 'Home', headerTitleAlign: 'center' }}
             />
         </TabOneStack.Navigator>
     )

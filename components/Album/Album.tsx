@@ -1,14 +1,9 @@
 import React from 'react'
 import { Image, View, Text } from 'react-native'
 import styles from './Album.style'
+import { Album as AlbumType } from '../../types'
 
-interface AlbumLite {
-    id: string
-    imageUrl: string
-    artistHeadline: string
-}
-
-interface PropsType extends AlbumLite {}
+interface PropsType extends AlbumType {}
 
 const Album: React.FC<PropsType> = ({ id, imageUrl, artistHeadline }) => {
     return (
