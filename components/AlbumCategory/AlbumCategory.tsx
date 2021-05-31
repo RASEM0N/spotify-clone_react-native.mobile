@@ -1,16 +1,10 @@
 import React from 'react'
 import { View, Text, FlatList } from 'react-native'
-import { Album as AlbumType } from '../../types'
+import { AlbumCategory as AlbumCategoryType } from '../../types'
 import styles from './AlbumCategory.style'
 import Album from '../Album/Album'
 
-export interface AlbumCategory {
-    id: string
-    title: string
-    albums: AlbumType[]
-}
-
-interface PropsType extends AlbumCategory {}
+interface PropsType extends AlbumCategoryType {}
 
 const AlbumCategory: React.FC<PropsType> = ({ title, albums, id }) => {
     return (

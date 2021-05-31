@@ -1,4 +1,4 @@
-import { AlbumCategory } from '../components/AlbumCategory/AlbumCategory'
+import { AlbumCategory } from '../types'
 
 const albums: AlbumCategory[] = [
     {

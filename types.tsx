@@ -21,8 +21,29 @@ export type TabTwoParamList = {
 }
 //#endregion
 
-export interface Album {
+export interface ID {
     id: string
+}
+
+export interface Album extends ID {
     imageUri: string
     artistsHeadline: string
+}
+
+export interface Song extends ID {
+    titie: string
+    imageUri: string
+    artist: string
+}
+
+export interface AlbumCategory extends ID {
+    title: string
+    albums: Album[]
+}
+
+export interface AlbumDetails extends Album {
+    name: string
+    by: string
+    numberOfLikes: number
+    songs: Song[]
 }
