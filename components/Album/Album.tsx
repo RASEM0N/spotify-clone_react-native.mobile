@@ -5,16 +5,16 @@ import { Album as AlbumType } from '../../types'
 
 interface PropsType extends AlbumType {}
 
-const Album: React.FC<PropsType> = ({ id, imageUrl, artistHeadline }) => {
+const Album: React.FC<PropsType> = ({ id, imageUri, artistsHeadline }) => {
     return (
         <View style={styles.container}>
             <Image
                 source={{
-                    uri: imageUrl,
+                    uri: imageUri,
                 }}
                 style={styles.image}
             />
-            <Text style={styles.text}>{artistHeadline}</Text>
+            <Text style={styles.text}>{artistsHeadline}</Text>
         </View>
     )
 }

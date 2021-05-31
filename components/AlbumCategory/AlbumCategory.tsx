@@ -5,13 +5,14 @@ import styles from './AlbumCategory.style'
 import Album from '../Album/Album'
 
 export interface AlbumCategory {
+    id: string
     title: string
     albums: AlbumType[]
 }
 
 interface PropsType extends AlbumCategory {}
 
-const AlbumCategory: React.FC<PropsType> = ({ title, albums }) => {
+const AlbumCategory: React.FC<PropsType> = ({ title, albums, id }) => {
     return (
         <View style={styles.container}>
             {/*Title of category*/}

@@ -1,5 +1,5 @@
 import React from 'react'
-import { ImageBackground, ScrollView, StyleSheet, View } from 'react-native'
+import { FlatList, ImageBackground, ScrollView, StyleSheet, View } from 'react-native'
 import AlbumCategory from '../components/AlbumCategory/AlbumCategory'
 import albums from '../data/albums'
 
@@ -12,12 +12,14 @@ export default function HomeScreen() {
                 }}
                 style={styles.image}
             />
-            <ScrollView showsHorizontalScrollIndicator={false}>
-                <AlbumCategory title="RUSSIA" albums={albums} />
-                <AlbumCategory title="BAN" albums={albums} />
-                <AlbumCategory title="BAN" albums={albums} />
-                <AlbumCategory title="BAN" albums={albums} />
-            </ScrollView>
+            <FlatList
+                data={albums}
+                renderItem={({ item }) => (
+                    <AlbumCategory id={item.id} albums={item.albums} title={item.title} />
+                )}
+                keyExtractor={(item) => item.id}
+                showsVerticalScrollIndicator={false}
+            />
         </View>
     )
 }

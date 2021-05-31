@@ -23,6 +23,6 @@ export type TabTwoParamList = {
 
 export interface Album {
     id: string
-    imageUrl: string
-    artistHeadline: string
+    imageUri: string
+    artistsHeadline: string
 }
