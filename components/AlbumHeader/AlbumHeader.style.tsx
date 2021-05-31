@@ -10,24 +10,30 @@ export default StyleSheet.create({
         height: 200,
         margin: 15,
     },
+
     name: {
         color: 'white',
         fontSize: 30,
         fontWeight: 'bold',
     },
+    artist: {
+        fontSize: 18,
+        color: '#9ea09f',
+    },
     creatorContainer: {
         flexDirection: 'row',
-        margin: 10,
+        marginTop: 10,
+        marginBottom: 20,
     },
     creator: {
         color: 'lightgray',
         margin: 5,
-        fontSize: 20,
+        fontSize: 16,
     },
     likes: {
         color: 'lightgray',
         margin: 5,
-        fontSize: 20,
+        fontSize: 16,
     },
     button: {
         backgroundColor: '#1CD05D',

@@ -48,5 +48,6 @@ export interface AlbumInfoHeader extends Album {
 }
 
 export interface AlbumDetails extends AlbumInfoHeader {
+    backgroundImage?: string
     songs: Song[]
 }
