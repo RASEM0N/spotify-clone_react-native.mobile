@@ -55,7 +55,7 @@ const PlayerWidget: React.FC<PropsType> = ({}) => {
         }
 
         if (isPlaying) {
-            await sound.stopAsync()
+            await sound.pauseAsync()
         } else {
             await sound.playAsync()
         }

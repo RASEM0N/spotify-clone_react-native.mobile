@@ -3,7 +3,7 @@ import { StyleSheet } from 'react-native'
 export default StyleSheet.create({
     container: {
         position: 'absolute',
-        bottom: 55,
+        bottom: 60,
         backgroundColor: 'rgb(17,17,17)',
         width: '100%',
         alignItems: 'center',
@@ -35,6 +35,7 @@ export default StyleSheet.create({
         alignItems: 'center',
         width: 100,
         justifyContent: 'space-around',
+        marginRight: 15,
     },
     title: {
         color: 'white',
