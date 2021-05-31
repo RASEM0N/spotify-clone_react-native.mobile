@@ -31,7 +31,7 @@ export interface Album extends ID {
 }
 
 export interface Song extends ID {
-    titie: string
+    title: string
     imageUri: string
     artist: string
 }
