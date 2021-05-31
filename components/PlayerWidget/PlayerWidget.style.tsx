@@ -3,13 +3,12 @@ import { StyleSheet } from 'react-native'
 export default StyleSheet.create({
     container: {
         position: 'absolute',
-        bottom: 79,
-        backgroundColor: '#131313',
+        bottom: 55,
+        backgroundColor: 'rgb(17,17,17)',
         flexDirection: 'row',
         width: '100%',
-        borderWidth: 2,
-        borderColor: 'black',
         alignItems: 'center',
+        paddingVertical: 10,
     },
     image: {
         width: 75,
