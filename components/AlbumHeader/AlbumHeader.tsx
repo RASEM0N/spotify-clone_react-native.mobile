@@ -1,0 +1,33 @@
+import React from 'react'
+import { Text, View, Image, TouchableOpacity } from 'react-native'
+import { AlbumInfoHeader } from '../../types'
+import styles from './AlbumHeader.style'
+
+interface PropsType extends AlbumInfoHeader {}
+
+const AlbumHeader: React.FC<PropsType> = ({
+    name,
+    imageUri,
+    id,
+    by,
+    artistsHeadline,
+    numberOfLikes,
+}) => {
+    return (
+        <View style={styles.container}>
+            <Image style={styles.image} source={{ uri: imageUri }} />
+            <Text style={styles.name}>{name}</Text>
+            <View style={styles.creatorContainer}>
+                <Text style={styles.creator}>By {by}</Text>
+                <Text style={styles.likes}>{numberOfLikes}</Text>
+            </View>
+            <TouchableOpacity>
+                <View style={styles.button}>
+                    <Text style={styles.buttonText}>PLAY</Text>
+                </View>
+            </TouchableOpacity>
+        </View>
+    )
+}
+
+export default AlbumHeader

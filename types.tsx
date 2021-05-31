@@ -41,9 +41,12 @@ export interface AlbumCategory extends ID {
     albums: Album[]
 }
 
-export interface AlbumDetails extends Album {
+export interface AlbumInfoHeader extends Album {
     name: string
     by: string
     numberOfLikes: number
+}
+
+export interface AlbumDetails extends AlbumInfoHeader {
     songs: Song[]
 }

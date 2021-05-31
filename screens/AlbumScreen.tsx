@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react'
-import { FlatList, Text, View } from 'react-native'
+import { FlatList, Text, View, StyleSheet } from 'react-native'
 import { RouteProp, useRoute } from '@react-navigation/native'
 import albumDetails from '../data/albumDetails'
 import SongListItem from '../components/SongListItem/SongListItem'
+import AlbumHeader from '../components/AlbumHeader/AlbumHeader'
 
 interface PropsType {}
 
@@ -13,7 +14,7 @@ const AlbumScreen: React.FC<PropsType> = ({}) => {
     useEffect(() => {}, [])
 
     return (
-        <View>
+        <View style={styles.container}>
             <FlatList
                 keyExtractor={(item) => item.id}
                 data={albumDetails.songs}
@@ -25,9 +26,23 @@ const AlbumScreen: React.FC<PropsType> = ({}) => {
                         id={item.id}
                     />
                 )}
+                ListHeaderComponent={() => (
+                    <AlbumHeader
+                        id={albumDetails.id}
+                        by={albumDetails.by}
+                        name={albumDetails.name}
+                        imageUri={albumDetails.imageUri}
+                        numberOfLikes={albumDetails.numberOfLikes}
+                        artistsHeadline={albumDetails.artistsHeadline}
+                    />
+                )}
             />
         </View>
     )
 }
 
 export default AlbumScreen
+
+const styles = StyleSheet.create({
+    container: {},
+})
