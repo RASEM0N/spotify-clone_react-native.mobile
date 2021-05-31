@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
-import { Text, View, Image, TouchableOpacity, StyleSheet } from 'react-native'
+import { Text, View, Image, TouchableOpacity } from 'react-native'
 import { AlbumInfoHeader } from '../../types'
 import styles from './AlbumHeader.style'
-import flatten = StyleSheet.flatten
 
 interface PropsType extends AlbumInfoHeader {}
 

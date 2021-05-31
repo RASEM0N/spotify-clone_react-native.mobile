@@ -2,7 +2,7 @@ import { StyleSheet } from 'react-native'
 
 export default StyleSheet.create({
     container: {
-        backgroundColor: 'rgba(255,255,255,0.02)',
+        backgroundColor: 'rgba(255,255,255,0.01)',
         flexDirection: 'row',
         borderColor: '#262626',
         padding: 15,
@@ -16,11 +16,12 @@ export default StyleSheet.create({
         height: 75,
     },
     title: {
-        color: 'white',
-        fontSize: 24,
+        color: '#bcc3c1',
+        fontWeight: 'bold',
+        fontSize: 22,
     },
     artist: {
-        color: 'lightgray',
-        fontSize: 20,
+        color: 'rgba(186,186,186,0.86)',
+        fontSize: 18,
     },
 })
