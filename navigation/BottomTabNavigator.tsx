@@ -9,6 +9,7 @@ import useColorScheme from '../hooks/useColorScheme'
 import HomeScreen from '../screens/HomeScreen'
 import TabTwoScreen from '../screens/TabTwoScreen'
 import { BottomTabParamList, HomeParamList, TabTwoParamList } from '../types'
+import AlbumScreen from '../screens/AlbumScreen'
 
 const BottomTab = createBottomTabNavigator<BottomTabParamList>()
 
@@ -75,8 +76,6 @@ export default function BottomTabNavigator() {
     )
 }
 
-// You can explore the built-in icon families and icons on the web at:
-
 // Each tab has its own navigation stack, you can read more about this pattern here:
 // https://reactnavigation.org/docs/tab-based-navigation#a-stack-navigator-for-each-tab
 const HomeStack = createStackNavigator<HomeParamList>()
@@ -85,9 +84,14 @@ function HomeNavigator() {
     return (
         <HomeStack.Navigator>
             <HomeStack.Screen
-                name="Home"
+                name="HomeScreen"
                 component={HomeScreen}
                 options={{ headerTitle: 'Home', headerTitleAlign: 'center' }}
+            />
+            <HomeStack.Screen
+                name="AlbumScreen"
+                component={AlbumScreen}
+                options={{ headerTitle: 'Album', headerTitleAlign: 'center' }}
             />
         </HomeStack.Navigator>
     )

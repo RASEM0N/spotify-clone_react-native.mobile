@@ -2,6 +2,7 @@ import React from 'react'
 import { FlatList, ImageBackground, ScrollView, StyleSheet, View } from 'react-native'
 import AlbumCategory from '../components/AlbumCategory/AlbumCategory'
 import albums from '../data/albums'
+import { useNavigation, useRoute } from '@react-navigation/native'
 
 export default function HomeScreen() {
     return (

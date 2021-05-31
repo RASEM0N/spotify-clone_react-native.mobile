@@ -1,4 +1,4 @@
-//#region other
+//#region НАВИГАЦИЯ
 export type RootStackParamList = {
     Root: undefined
     NotFound: undefined
@@ -12,8 +12,8 @@ export type BottomTabParamList = {
 }
 
 export type HomeParamList = {
-    Home: undefined
-    Album: undefined
+    HomeScreen: undefined
+    AlbumScreen: undefined
 }
 
 export type TabTwoParamList = {
