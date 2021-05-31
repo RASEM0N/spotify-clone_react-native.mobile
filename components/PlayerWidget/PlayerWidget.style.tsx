@@ -5,10 +5,16 @@ export default StyleSheet.create({
         position: 'absolute',
         bottom: 55,
         backgroundColor: 'rgb(17,17,17)',
-        flexDirection: 'row',
         width: '100%',
         alignItems: 'center',
-        paddingVertical: 10,
+    },
+    row: {
+        flexDirection: 'row',
+    },
+    progress: {
+        height: 5,
+        alignSelf: 'flex-start',
+        backgroundColor: '#8fef2f',
     },
     image: {
         width: 75,
